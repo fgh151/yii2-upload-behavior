@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist fgh151/yii2-uploud-behavior "*"
+php composer.phar require --prefer-dist fgh151/yii2-upload-behavior "*"
 ```
 
 or add
 
 ```
-"fgh151/yii2-uploud-behavior": "*"
+"fgh151/yii2-upload-behavior": "*"
 ```
 
 to the require section of your `composer.json` file.
