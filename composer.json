@@ -1,0 +1,21 @@
+{
+    "name": "fgh151/yii2-upload-behavior",
+    "description": "Uploud system for yii2 projects",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fedor B Gorsky",
+            "email": "fedor@support-pc.org"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "fgh151\\upload\\": ""
+        }
+    }
+}
