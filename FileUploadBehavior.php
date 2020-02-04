@@ -28,6 +28,8 @@ class FileUploadBehavior extends Behavior
     public $folder;
     /** @var  string */
     public $storageAttribute;
+    /** @var string  */
+    public $storageUploadAttribute = 'uploadId';
 
     /**
      * @return array
@@ -50,6 +52,7 @@ class FileUploadBehavior extends Behavior
         /** @var Model $this ->owner */
         $files = UploadedFile::getInstances($this->owner, $this->attribute);
         $storageAttribute = $this->storageAttribute;
+        $uploadAttribute = $this->storageUploadAttribute;
 
         foreach ($files as $file) {
 
@@ -68,7 +71,7 @@ class FileUploadBehavior extends Behavior
             $storage = new $this->storageClass();
             /** @var ActiveRecord $storage */
             $storage->$storageAttribute = $this->owner->id;
-            $storage->uploadId = $upload->id;
+            $storage->$uploadAttribute = $upload->id;
             $storage->save();
         }
     }
