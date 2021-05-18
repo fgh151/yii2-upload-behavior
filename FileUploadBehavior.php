@@ -61,8 +61,12 @@ class FileUploadBehavior extends Behavior
             $path = \Yii::getAlias($path);
 
             FileHelper::createDirectory($path);
-
-            $fileName = $file->baseName . '.' . $file->extension;
+            
+            $fileName = $file->baseName;
+            if ($file->extension) {
+                $fileName += '.' . $file->extension;
+            } 
+            
             $file->saveAs($path . '/' . $fileName);
             $upload = new Upload();
             $upload->fsFileName = $fileName;
