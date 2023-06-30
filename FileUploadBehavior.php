@@ -64,7 +64,7 @@ class FileUploadBehavior extends Behavior
             
             $fileName = $file->baseName;
             if ($file->extension) {
-                $fileName += '.' . $file->extension;
+                $fileName .= '.' . $file->extension;
             } 
             
             $file->saveAs($path . '/' . $fileName);
